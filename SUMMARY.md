@@ -13,3 +13,8 @@
 * [Distro specific variables](ansible/ansible-disto-vars.md)
 * [Naming hosts and groups](ansible/naming-hosts-and-groups.md)
 
+## linting <a id="lint"></a>
+
+* [Lint via pre-commit tool](lint/lint-via-pre-commit-tool.md)
+* [Untitled](lint/untitled-1.md)
+
