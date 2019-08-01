@@ -12,9 +12,14 @@
 
 * [Distro specific variables](ansible/ansible-disto-vars.md)
 * [Naming hosts and groups](ansible/naming-hosts-and-groups.md)
+* [Ansible ignore\_errors are evil](ansible/ignore-errors-are-evil.md)
 
 ## linting <a id="lint"></a>
 
 * [Lint via pre-commit tool](lint/lint-via-pre-commit-tool.md)
 * [Untitled](lint/untitled-1.md)
+
+## kitchensink
+
+* [Quotes](kitchensink/quotes.md)
 
