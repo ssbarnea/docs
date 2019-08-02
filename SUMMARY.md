@@ -13,6 +13,7 @@
 * [Distro specific variables](ansible/ansible-disto-vars.md)
 * [Naming hosts and groups](ansible/naming-hosts-and-groups.md)
 * [Ansible ignore\_errors are evil](ansible/ignore-errors-are-evil.md)
+* [YAML 101](ansible/yaml-syntax.md)
 
 ## linting <a id="lint"></a>
 
