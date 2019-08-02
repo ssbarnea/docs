@@ -8,6 +8,8 @@ description: >-
 
 While Ansible was quite flexible regarding what you could use for inventory hostnames and groups, things changed for the worse. Newer versions are complaining about use of dashes \(minus\) in group names.
 
+You can find more informationn about the subject on [\#56930](https://github.com/ansible/ansible/issues/56930), where `TRANSFORM_INVALID_GROUP_CHARS` is mentioned but I advise you to not take thas path.
+
 Ansible also complains about using the same hostname as a groupname as this can cause confusions.
 
 We also know that it would be pretty bad idea to use underlines as hostnames because they are not accepted by [RFC 822](https://www.ietf.org/rfc/rfc822.txt).
