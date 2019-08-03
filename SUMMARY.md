@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Bla, bla, bla](README.md)
+* [Home](README.md)
 
 ## molecule
 
