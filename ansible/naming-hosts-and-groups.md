@@ -6,9 +6,9 @@ description: >-
 
 # Naming hosts and groups
 
-While Ansible was quite flexible regarding what you could use for inventory hostnames and groups, things changed for the worse. Newer versions are complaining about use of dashes \(minus\) in group names.
+While Ansible was quite flexible regarding what you could use for inventory hostnames and groups, things changed for the worse. Newer versions are complaining about use of **dashes** \(minus\) in group names.
 
-You can find more informationn about the subject on [\#56930](https://github.com/ansible/ansible/issues/56930), where `TRANSFORM_INVALID_GROUP_CHARS` is mentioned but I advise you to not take thas path.
+You can find more informationn about changes made around groupnames read [this explanatory comment from bcoca](https://github.com/ansible/ansible/issues/56930#issuecomment-516863432).
 
 Ansible also complains about using the same hostname as a groupname as this can cause confusions.
 
