@@ -10,6 +10,8 @@ While Ansible was quite flexible regarding what you could use for inventory host
 
 You can find more informationn about changes made around groupnames read [this explanatory comment from bcoca](https://github.com/ansible/ansible/issues/56930#issuecomment-516863432).
 
+If you want to find out why there is a long thread to read on bug [\#56930](https://github.com/ansible/ansible/issues/56930). I was originally offended by the decision but after few weeks and reading other comments, I realised that sometimes is better to adapt than fight.
+
 Ansible also complains about using the same hostname as a groupname as this can cause confusions.
 
 We also know that it would be pretty bad idea to use underlines as hostnames because they are not accepted by [RFC 822](https://www.ietf.org/rfc/rfc822.txt).
@@ -20,6 +22,21 @@ As I personally would find confusing to use different naming rules for hosts and
 * **rename groups** so they cannot accidentably be confused with single hosts. Using plurals seems fine.
 
 There are ways to disable deprecation warnings or even to change the the group naming rules but you will only prolong your pain. 
+
+{% code-tabs %}
+{% code-tabs-item title="hosts.ini" %}
+```text
+[baremetals]
+...
+[testers]
+...
+[kube_nodes]
+...
+[k8s_cluster]
+...
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Most people thing that getting a bandaid off quickly is less painful.
 
