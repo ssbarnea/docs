@@ -25,3 +25,7 @@
 * [Quotes](kitchensink/quotes.md)
 * [Tools](kitchensink/tools.md)
 
+## python
+
+* [PyTest 101](python/pytest.md)
+
