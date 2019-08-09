@@ -45,7 +45,7 @@ pytest -s
 On my local machine I defined \`PYTEST\_OPTS=-s\` so I don't need to remember adding it each time. Still, on CI usually we do not want to do this because disabling capture means that pytest would generate a report without stdout.
 {% endhint %}
 
-As an more advanced hint for tox users, you can also add `{tty:-s}` inside your `tox.ini` file, which mainly means that capture will be disabled when run on an interactice console \(your terminal\) but not on CI. Keep in mind that this [option](https://tox.readthedocs.io/en/latest/config.html#interactive-shell-substitution) is relatively new to tox. And yes, you could also use this feature to trigger the debugger via `--pdb`.
+ As an more advanced hit for tox users, you can also add `{tty:-s}` inside your `tox.ini` file, which mainly means that capture will be disabled when run on an interactice console \(your terminal\) but not on CI. Keep in mind that this switch is relatively new to tox. And yes, you could also use this feature to trigger the debugger via \`--pdb\`.
 
 ### Running tests in parallel
 
