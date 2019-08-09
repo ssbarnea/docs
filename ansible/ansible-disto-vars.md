@@ -15,17 +15,19 @@ This can nicely be achieved by using an overlayed configuration file loading pat
 Doing this allows you to define overrides in a minimal number of places, more exactly at the location where the new config diverge from what the default one.
 
 ```yaml
-- name: Include OS specific variables
+- name: Load operating system specific variables
   include_vars: "{{ item }}"
   failed_when: false
   loop:
       - "family-{{ ansible_os_family | lower }}.yml"
       - "family-{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-      - "{{ ansible_distribution | lower }}.yml"
-      - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-      - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version.split('.')[0:2] | join('-') | lower }}.yml"
-      - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version.split('.')[0:3] | join('-') | lower }}.yml"
- # pattern: v2
+      - "{{ ansible_distribution | lower | replace(' ', '-') }}.yml"
+      - "{{ ansible_distribution | lower | replace(' ', '-') }}-{{ ansible_distribution_major_version | lower }}.yml"
+      - "{{ ansible_distribution | lower | replace(' ', '-') }}-{{ ansible_distribution_version.split('.')[0:2] | join('-') | lower }}.yml"
+      - "{{ ansible_distribution | lower | replace(' ', '-') }}-{{ ansible_distribution_version.split('.')[0:3] | join('-') | lower }}.yml"
+  tags:
+    - always
+  # pattern: v3
  
  # define variables in files like:
  # vars/family-redhat.yml # common to Fedora/RHEL/CentOS
@@ -34,11 +36,11 @@ Doing this allows you to define overrides in a minimal number of places, more ex
  # vars/ubuntu.yml # all Ubuntu versions
 ```
 
-The example above is the current version which I am currently using whenever I need to load OS specific variables in ansible. 
+The example above is the current version which I am currently using whenever I need to load OS specific variables in Ansible. 
 
-As you can see, I included a version on it in order to better track changes. The v2 was introduced recently by adding the family suffix. This was needed in order to avoid an unexpected bug caused by the fact that, for Red Hat Enterprise Linux, Ansible populates both **ansible\_os\_family** and **ansible\_distribution** with "_**RedHat**_", meaning that 1st file and 3rd line would be the same and we would not be able to load configuration correctly.
+As you can see, I included a version on it in order to better track changes. The v2 was introduced recently by adding the family suffix. This was needed in order to avoid an unexpected bug caused by the fact that, for Red Hat Enterprise Linux, Ansible populates both `ansible_os_family` and `ansible_distribution` with `RedHat`, meaning that 1st file and 3rd line would be the same and we would not be able to load configuration correctly.
 
-This type of configuration loading is very easy to understand and is less-error prone than editing conditionds spread across the role. It major advantage is that it isolates config from code.
+This type of configuration loading is very easy to understand and is less-error prone than editing conditions spread across the role. It major advantage is that it isolates config from code.
 
-My hope for the future is that Ansible will be able to do this automaticallly if you create the special files in vars/, so you would not even need to manually load the at the start of the playbook.
+My hope for the future is that Ansible will be able to do this automatically if you create the special files in vars/, so you would not even need to manually load the at the start of the playbook.
 
