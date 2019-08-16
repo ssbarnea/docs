@@ -45,3 +45,50 @@ This type of configuration loading is very easy to understand and is less-error 
 
 My hope for the future is that Ansible will be able to do this automatically if you create the special files in vars/, so you would not even need to manually load the at the start of the playbook.
 
+{% tabs %}
+{% tab title="ansible\_os\_family" %}
+```text
+# You may find this mapping useful:
+OS_FAMILY = dict(
+            RedHat = 'RedHat',
+            Fedora = 'RedHat', 
+            CentOS = 'RedHat', 
+            Scientific = 'RedHat',
+            SLC = 'RedHat', 
+            Ascendos = 'RedHat', 
+            CloudLinux = 'RedHat', 
+            PSBM = 'RedHat',
+            OracleLinux = 'RedHat', 
+            OVS = 'RedHat', 
+            OEL = 'RedHat', 
+            Amazon = 'RedHat',
+            XenServer = 'RedHat', 
+            Ubuntu = 'Debian', 
+            Debian = 'Debian', 
+            SLES = 'Suse',
+            SLED = 'Suse', 
+            OpenSuSE = 'Suse', 
+            SuSE = 'Suse', 
+            Gentoo = 'Gentoo',
+            Archlinux = 'Archlinux', 
+            Mandriva = 'Mandrake', 
+            Mandrake = 'Mandrake',
+            Solaris = 'Solaris', 
+            Nexenta = 'Solaris',  
+            OmniOS = 'Solaris', 
+            OpenIndiana = 'Solaris',
+            SmartOS = 'Solaris', 
+            AIX = 'AIX', 
+            Alpine = 'Alpine', 
+            MacOSX = 'Darwin',
+            FreeBSD = 'FreeBSD', 
+            HPUX = 'HP-UX'
+        )
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+

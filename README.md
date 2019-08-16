@@ -6,9 +6,9 @@ description: Personal homepage of Sorin Sbarnea
 
 Writing about yourself seems to always be challenge but somehow I need to put something on this page. Mainly I created this site as a blog, where I could share with others some of the things I learn over the time.
 
-I live in [Norwich, UK](https://en.wikipedia.org/wiki/Norwich) and I am currently working for [Red Hat](https://www.redhat.com/en) \(IBM\) as part of the [OpenStack](https://www.openstack.org/) team focusing mostly on continous integration. 
+I live in [Norwich, UK](https://en.wikipedia.org/wiki/Norwich) and I am currently working for [Red Hat](https://www.redhat.com/en) \(IBM\) as part of the [OpenStack](https://www.openstack.org/) team focusing mostly on continuous integration. 
 
-Nowdays, I do code mostly in [Python](https://www.python.org/), [Ansible](https://www.ansible.com/) and whatever else it takes to get the things done.
+Nowadays, I do code mostly in [Python](https://www.python.org/), [Ansible](https://www.ansible.com/) and whatever else it takes to get the things done.
 
 As I do like to give back the the community, I am also **core contributor** or maintainer in few other Python based open source projects like:
 
@@ -18,7 +18,9 @@ As I do like to give back the the community, I am also **core contributor** or m
 * [jira](https://github.com/pycontribs/jira) - client library and CLI for communicating with JIRA Issue Tracker
 * [jenkins-job-builder](https://docs.openstack.org/infra/jenkins-job-builder/) and [python-jenkins](https://python-jenkins.readthedocs.io/en/latest/) - used to automate management of Jenkins jobs.
 * [git-review](https://docs.openstack.org/infra/git-review/) - the client that eases interaction between git and Gerrit
-* [doc8](https://github.com/PyCQA/doc8) - style checker for rst
+* [doc8](https://github.com/PyCQA/doc8) - style checker for RST
+
+You may also want to check the list of [tools](https://docs.sbarnea.com/kitchensink/tools) I use and occasionally fix a bug or two in those too.
 
 
 
