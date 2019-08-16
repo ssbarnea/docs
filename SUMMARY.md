@@ -8,6 +8,7 @@
 * [Allowing some hosts to fail](molecule/allowing-some-hosts-to-fail.md)
 * [Skipping tasks during testing](molecule/skipping-tasks-during-testing.md)
 * [Using a remote docker](molecule/using-a-remote-docker.md)
+* [Molecule 101](molecule/molecule-101.md)
 
 ## ansible
 
