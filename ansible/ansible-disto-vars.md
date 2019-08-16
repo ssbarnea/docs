@@ -31,6 +31,7 @@ Doing this allows you to define overrides in a minimal number of places, more ex
  
  # define variables in files like:
  # vars/family-redhat.yml # common to Fedora/RHEL/CentOS
+ # vars/family-redhat-8.yml # applies to rhel 8 and centos 8
  # vars/centos-7.yml
  # vars/family-debian.yml # common to Debian, Ubuntu,...
  # vars/ubuntu.yml # all Ubuntu versions
