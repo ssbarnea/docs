@@ -25,6 +25,7 @@
 
 * [Quotes](kitchensink/quotes.md)
 * [Tools](kitchensink/tools.md)
+* [gri : Gerrit Reduced Interface](kitchensink/gri-gerrit-reduced-interface.md)
 
 ## python
 
