@@ -4,9 +4,9 @@ description: Some hints about using ansible-lint
 
 # ansible-lint
 
-### Accesing Ansible modules from other repos
+### Accessing Ansible modules from other repos
 
-In the unlikely case where you would endup with ansible-lint errors caused by the fact that it fails to find some ansible modules which may not even be located inside your own repository, I provide this hack for you which assures is able to find `zuul_return` module which is part of `zuul` python package.
+In the unlikely case where you would end up with `ansible-lint` errors caused by the fact that it fails to find some Ansible modules which may not even be located inside your own repository, I provide this hack for you which assures is able to find `zuul_return` module which is part of `zuul` Python package.
 
 {% code-tabs %}
 {% code-tabs-item title=".pre-commit-config.yaml" %}
