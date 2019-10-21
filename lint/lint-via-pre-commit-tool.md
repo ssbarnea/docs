@@ -62,3 +62,5 @@ Few examples of python projects where I successfully adopted pre-commits:
 
 You may want to also check the `tox.ini` file to see how they are consuming it on CI. Let me know if you had a good, or bad, experience with it. Also, if you need help adopting it for an openstack project, feel free to let me know, it takes only a couple of minutes to add it.
 
+
+
