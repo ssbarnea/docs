@@ -20,6 +20,7 @@
 ## linting <a id="lint"></a>
 
 * [Lint via pre-commit tool](lint/lint-via-pre-commit-tool.md)
+* [ansible-lint](lint/ansible-lint.md)
 
 ## kitchensink
 
