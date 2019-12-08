@@ -30,8 +30,7 @@ There is a **huge difference** on how the output looks:
 
 Here is the code used to exemplify the difference:
 
-{% code-tabs %}
-{% code-tabs-item title="playbook.yml" %}
+{% code title="playbook.yml" %}
 ```yaml
 #!/usr/bin/env ansible-playbook -v
 - hosts: 'localhost'
@@ -46,8 +45,7 @@ Here is the code used to exemplify the difference:
       failed_when: false
       changed_when: false
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 As you probably observed I also included `changed_when: false`, as this task does not modify anything on the target machine, it only reads data. This is important too because ansible will report task as changed if you do not, something that is also confusing. Ideally if you run a playbook twice, you should get `changed=0`at the end, but somehow I have the impression that you are not there yet ;\)
 

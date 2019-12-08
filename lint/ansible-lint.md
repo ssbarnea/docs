@@ -8,8 +8,7 @@ description: Some hints about using ansible-lint
 
 In the unlikely case where you would end up with `ansible-lint` errors caused by the fact that it fails to find some Ansible modules which may not even be located inside your own repository, I provide this hack for you which assures is able to find `zuul_return` module which is part of `zuul` Python package.
 
-{% code-tabs %}
-{% code-tabs-item title=".pre-commit-config.yaml" %}
+{% code title=".pre-commit-config.yaml" %}
 ```yaml
   - repo: https://github.com/ansible/ansible-lint.git
     rev: v4.1.1a0
@@ -26,8 +25,7 @@ In the unlikely case where you would end up with `ansible-lint` errors caused by
         additional_dependencies:
           - zuul
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

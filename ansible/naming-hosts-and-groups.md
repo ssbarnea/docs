@@ -23,8 +23,7 @@ As I personally would find confusing to use different naming rules for hosts and
 
 There are ways to disable deprecation warnings or even to change the the group naming rules but you will only prolong your pain. 
 
-{% code-tabs %}
-{% code-tabs-item title="hosts.ini" %}
+{% code title="hosts.ini" %}
 ```text
 [baremetals]
 ...
@@ -35,8 +34,7 @@ There are ways to disable deprecation warnings or even to change the the group n
 [k8s_cluster]
 ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Most people thing that getting a bandaid off quickly is less painful.
 

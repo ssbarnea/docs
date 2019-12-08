@@ -10,8 +10,7 @@ description: >-
 
 Anchors allow you to avoid repeating yourself inside the **same** YAML document. They are expended by the loader.  
 
-{% code-tabs %}
-{% code-tabs-item title="sample.yaml" %}
+{% code title="sample.yaml" %}
 ```yaml
 --
 john: &myanchor
@@ -23,8 +22,7 @@ mary:
   
 # when loaded mary.age will be '30'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
  Keep in mind that you can use them only with dictionaries.
@@ -43,8 +41,7 @@ bar: false
 
 As sooon you have to write longer strings, you will need to learn about blocks and how they are rendered. 
 
-{% code-tabs %}
-{% code-tabs-item title="sample-blocks.yaml" %}
+{% code title="sample-blocks.yaml" %}
 ```yaml
 literal_block: |
     this is first line
@@ -55,8 +52,7 @@ folded_block: >  # valid yaml comment
     I have a big
     dog.  # this is not a comment, gets into string
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 Keep in mind that blocks alter how commets work in YAML so inside a block body you cannot use comments as they will become part of the loaded string.
